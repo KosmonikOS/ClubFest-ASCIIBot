@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>_111</RootNamespace>
+    <RootNamespace>ClubFestBotCSharp</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UserSecretsId>74eb1d22-987c-4935-978d-b62f6d07e416</UserSecretsId>
