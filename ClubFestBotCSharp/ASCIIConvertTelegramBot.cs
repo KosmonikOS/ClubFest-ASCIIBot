@@ -130,12 +130,9 @@ internal class ASCIIConvertTelegramBot
 
     private  (bool isValid, int font, int width) ParseCaption(string caption)
     {
-        var parsed = caption
-            .Split(" ")
-            .Select(Int32.Parse)
-            .ToArray();
-        var isValid = !(parsed[0] < 0 || parsed[1] < 0 || parsed[0] * parsed[1] is > 1000);
-        return (isValid, parsed[0], parsed[1]);
+        int font;
+        var isValid = Int32.TryParse(caption, out font) && font is > 0 and < 1000;
+        return (isValid, font, 1000 / font);
     }
 
     private async Task<Stream> LoadMessagePhotoAsync(ITelegramBotClient botClient
